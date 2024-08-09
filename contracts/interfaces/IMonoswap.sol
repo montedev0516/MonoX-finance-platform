@@ -5,13 +5,13 @@ interface IMonoswap {
 
     function WETH() external returns (address);
     
-    // function swapIn(
-    //     address tokenIn,
-    //     address tokenOut,
-    //     address from,
-    //     address to,
-    //     uint256 amountIn
-    // ) external returns (uint256);
+    function swapIn(
+        address tokenIn,
+        address tokenOut,
+        address from,
+        address to,
+        uint256 amountIn
+    ) external returns (uint256);
     
     function swapOut(address tokenIn,
         address tokenOut,
