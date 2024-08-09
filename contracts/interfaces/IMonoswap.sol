@@ -31,8 +31,8 @@ interface IMonoswap {
         address _token,
         uint256 liquidity,
         address to,
-        // uint256 minVcashOut, 
-        // uint256 minTokenOut,
+        uint256 minVcashOut, 
+        uint256 minTokenOut,
         bool isETH
     ) external returns(uint256, uint256);
     
