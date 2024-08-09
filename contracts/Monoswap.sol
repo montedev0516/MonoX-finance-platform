@@ -157,7 +157,7 @@ contract Monoswap is Initializable, OwnableUpgradeable {
 
   // ------------
   uint public poolSizeMinLimit;
-  mapping (address => bool) public unassessedFees;
+  mapping (address => uint) public unassessedFees;
 
   function initialize(IMonoXPool _monoXPool, IvCash _vcash) public initializer {
     OwnableUpgradeable.__Ownable_init();
