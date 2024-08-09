@@ -126,10 +126,10 @@ contract Monoswap is Initializable, OwnableUpgradeable {
     uint swapVcashValue
   );
 
-  // event PriceAdjusterChanged(
-  //   address indexed priceAdjuster,
-  //   bool added
-  // );
+  event PriceAdjusterChanged(
+    address indexed priceAdjuster,
+    bool added
+  );
 
   event PoolBalanced(
     address _token,
