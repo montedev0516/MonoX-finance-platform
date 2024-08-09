@@ -20,11 +20,11 @@ interface IMonoswap {
         uint256 amountOut
     ) external returns (uint256);
     
-    // function getAmountIn(
-    //     address tokenIn,
-    //     address tokenOut, 
-    //     uint256 amountOut
-    // ) external view returns (uint256, uint256, uint256, uint256);
+    function getAmountIn(
+        address tokenIn,
+        address tokenOut, 
+        uint256 amountOut
+    ) external view returns (uint256, uint256, uint256, uint256);
     
     function removeLiquidityHelper(
         address user,
