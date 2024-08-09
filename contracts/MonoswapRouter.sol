@@ -116,6 +116,12 @@ import "hardhat/console.sol";
     IMonoXPool(monoXPool).safeTransferETH(to, amountOut);
   }
 
+  // add one-sided liquidity to a pool. no vcash
+  function addLiquidity (address _token, uint256 _amount, address to) external override returns(uint256 liquidity) {
+    liquidity = IMonoswap(core).addLiquidityPair(msg.sender, _token, 0, _amount, msg.sender, to);
+  }  
+
+
   // add liquidity pair to a pool. allows adding vcash.
   function addLiquidityPair (address _token, 
     uint256 vcashAmount, 
@@ -124,11 +130,7 @@ import "hardhat/console.sol";
     liquidity = IMonoswap(core).addLiquidityPair(msg.sender, _token, vcashAmount, tokenAmount, msg.sender, to);
   }
 
-  // add one-sided liquidity to a pool. no vcash
-  function addLiquidity (address _token, uint256 _amount, address to) external override returns(uint256 liquidity) {
-    liquidity = IMonoswap(core).addLiquidityPair(msg.sender, _token, 0, _amount, msg.sender, to);
-  }  
-
+  
   // add one-sided ETH liquidity to a pool. no vcash
   function addLiquidityETH (address to) external override payable returns(uint256 liquidity)  {
     MonoXLibrary.safeTransferETH(monoXPool, msg.value);
