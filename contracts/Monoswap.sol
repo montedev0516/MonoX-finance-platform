@@ -43,7 +43,7 @@ contract Monoswap is Initializable, OwnableUpgradeable {
     address token;
     PoolStatus status;
     uint112 vcashDebt;
-    uint112 vcashCredit;
+    // uint112 vcashCredit;
     // uint112 tokenBalance;
     uint256 price; // over 1e18
     uint256 createdAt; // timestamp
