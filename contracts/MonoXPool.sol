@@ -13,7 +13,7 @@ import './interfaces/IWETH.sol';
 
 contract MonoXPool is Initializable, OwnableUpgradeable, ERC1155Upgradeable {
     using SafeMath for uint256;
-    // using SafeERC20 for IERC20;
+    using SafeERC20 for IERC20;
 
     address public WETH;
     mapping (uint256 => uint256) public totalSupply;
