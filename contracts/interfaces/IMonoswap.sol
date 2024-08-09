@@ -26,15 +26,15 @@ interface IMonoswap {
     //     uint256 amountOut
     // ) external view returns (uint256, uint256, uint256, uint256);
     
-    function removeLiquidityHelper(
-        address user,
-        address _token,
-        uint256 liquidity,
-        address to,
-        uint256 minVcashOut, 
-        uint256 minTokenOut,
-        bool isETH
-    ) external returns(uint256, uint256);
+    // function removeLiquidityHelper(
+    //     address user,
+    //     address _token,
+    //     uint256 liquidity,
+    //     address to,
+    //     uint256 minVcashOut, 
+    //     uint256 minTokenOut,
+    //     bool isETH
+    // ) external returns(uint256, uint256);
     
     function addLiquidityPair(
         address user,
