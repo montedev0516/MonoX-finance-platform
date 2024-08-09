@@ -39,8 +39,8 @@ interface IMonoswap {
     function addLiquidityPair(
         address user,
         address _token,
-        // uint256 vcashAmount,
-        // uint256 tokenAmount,
+        uint256 vcashAmount,
+        uint256 tokenAmount,
         address from,
         address to
     ) external returns(uint256);
